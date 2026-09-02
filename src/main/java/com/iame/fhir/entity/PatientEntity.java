@@ -30,7 +30,7 @@ public class PatientEntity {
     @Column(name = "birth_date")
     private String birthDate;
 
-    // Default Constructors, Getters & Setters
+    
     public PatientEntity() {}
 
     public Long getId() { return id; }

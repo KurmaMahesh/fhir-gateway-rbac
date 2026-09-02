@@ -14,7 +14,7 @@ public class PatientController {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    // 1. GET: డాక్టర్ ఎవరిదైనా చూడొచ్చు, పేషెంట్ వాళ్ళ సొంత డేటా మాత్రమే చూడగలరు
+    
     @GetMapping("/{id}")
     public Object getPatient(@PathVariable("id") String id, Authentication authentication) {
         String loggedInUser = authentication.getName();
@@ -34,10 +34,9 @@ public class PatientController {
         }
     }
 
-    // 2. POST: కేవలం డాక్టర్ మాత్రమే కొత్త పేషెంట్‌ని యాడ్ చేయగలరు!
-    @PostMapping
+       @PostMapping
     public String createPatient(@RequestBody Map<String, Object> patientData, Authentication authentication) {
-        // లాగిన్ అయిన యూజర్ డాక్టర్ కాదా అని చెక్ చేయడం
+       
         boolean isDoctor = authentication.getAuthorities().stream()
                 .anyMatch(a -> a.getAuthority().equals("ROLE_DOCTOR") || a.getAuthority().equals("ROLE_ROLE_DOCTOR"));
 

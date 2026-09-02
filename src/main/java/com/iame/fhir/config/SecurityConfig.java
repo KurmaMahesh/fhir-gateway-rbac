@@ -16,7 +16,7 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                .antMatchers("/patients/**").authenticated() // requestMatchers బదులు antMatchers వాడాలి
+                .antMatchers("/patients/**").authenticated()
                 .anyRequest().permitAll()
             )
             .httpBasic(withDefaults());
