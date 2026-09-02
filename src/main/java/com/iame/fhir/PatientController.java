@@ -52,7 +52,7 @@ public class PatientController {
                 patientData.get("name"),
                 patientData.get("gender"),
                 patientData.get("birth_date"),
-                "{noop}" + patientData.get("password"), // పాస్‌వర్డ్ సెక్యూరిటీ కోసం {noop}
+                "{noop}" + patientData.get("password"), 
                  patientData.get("role")
             );
 

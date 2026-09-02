@@ -20,7 +20,7 @@ public class SecurityConfig {
                  .anyRequest().permitAll()
             )
             .httpBasic(withDefaults());
-
+ 
         return http.build();
     }
 }

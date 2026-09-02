@@ -9,4 +9,4 @@ import org.springframework.stereotype.Repository;
 public interface PatientRepository extends JpaRepository<PatientEntity, Long> {
     
         Optional<PatientEntity> findByPatientFhirId(String patientFhirId);
-} 
+}  
