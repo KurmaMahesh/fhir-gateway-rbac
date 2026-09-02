@@ -29,7 +29,7 @@ public class RateLimitFilter implements Filter {
         if (bucket.tryConsume(1)) {
             chain.doFilter(request, response);
         } else {
-            HttpServletResponse httpResponse = (HttpServletResponse) response;
+             HttpServletResponse httpResponse = (HttpServletResponse) response;
             httpResponse.setStatus(429); // 429 Too Many Requests
             httpResponse.getWriter().write("Gateway Rate Limit Exceeded: Too many requests. Try again later.");
         }

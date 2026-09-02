@@ -53,7 +53,7 @@ public class PatientController {
                 patientData.get("gender"),
                 patientData.get("birth_date"),
                 "{noop}" + patientData.get("password"), // పాస్‌వర్డ్ సెక్యూరిటీ కోసం {noop}
-                patientData.get("role")
+                 patientData.get("role")
             );
 
             return "Patient record created successfully!";

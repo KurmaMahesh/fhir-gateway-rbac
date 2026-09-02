@@ -17,7 +17,7 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
                 .antMatchers("/patients/**").authenticated()
-                .anyRequest().permitAll()
+                 .anyRequest().permitAll()
             )
             .httpBasic(withDefaults());
 
